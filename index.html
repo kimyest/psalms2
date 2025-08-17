@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Psalms Design — Portfolio & Studio</title>
+  <meta name="description" content="Psalms Design — 음반 · 책 · 상품 디자인 스튜디오의 포트폴리오">
+  <meta name="theme-color" content="#111827">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="Psalms Design — Portfolio & Studio">
+  <meta property="og:description" content="Album · Book · Product Design">
+  <meta property="og:image" content="assets/og.png">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+
+  <!-- 헤더 -->
+  <header class="header">
+    <div class="container nav">
+      <a href="#home" class="brand">
+        <img src="assets/logo.svg" alt="Psalms Design 로고" width="28" height="28">
+        <span>PSALMS DESIGN</span>
+      </a>
+      <button class="nav-toggle" aria-controls="menu" aria-expanded="false" aria-label="메뉴 열기">☰</button>
+      <ul id="menu" class="menu" role="menubar">
+        <li><a href="#work">Works</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button class="mode" aria-pressed="false">🌓</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero container">
+      <div class="hero-col">
+        <h1 class="display">
+          We design <span class="accent">albums</span>,<br>
+          <span class="accent">books</span> &amp; <span class="accent">products</span>.
+        </h1>
+        <p class="lead">내용과 형태의 조화를 최우선으로. Psalms Design은 음반·출판·상품의 스토리를 시각으로 번역합니다.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#work">Selected Works</a>
+          <a class="btn btn-ghost" href="#contact">프로젝트 문의</a>
+        </div>
+      </div>
+      <div class="hero-marquee" aria-hidden="true">
+        <div class="track">
+          <span>ALBUM</span><span>BOOK</span><span>PRODUCT</span><span>IDENTITY</span>
+          <span>ALBUM</span><span>BOOK</span><span>PRODUCT</span><span>IDENTITY</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works -->
+    <section id="work" class="section container">
+      <header class="section-head">
+        <h2>Selected Works</h2>
+        <p class="muted">필터를 선택해 작업 타입을 살펴보세요.</p>
+        <div class="chips">
+          <button class="chip active" data-filter="all">전체</button>
+          <button class="chip" data-filter="album">음반</button>
+          <button class="chip" data-filter="book">책</button>
+          <button class="chip" data-filter="product">상품</button>
+        </div>
+      </header>
+
+      <div class="masonry">
+        <figure class="card album">
+          <img src="assets/album-1.svg" data-full="assets/album-1.svg" alt="앨범 디자인 예시">
+          <figcaption><h3>Gradient Field</h3><p class="meta">Album · 2024</p></figcaption>
+        </figure>
+        <figure class="card book">
+          <img src="assets/book-1.svg" data-full="assets/book-1.svg" alt="책 디자인 예시">
+          <figcaption><h3>Lines of Quiet</h3><p class="meta">Book · 2023</p></figcaption>
+        </figure>
+        <figure class="card product">
+          <img src="assets/product-1.svg" data-full="assets/product-1.svg" alt="상품 디자인 예시">
+          <figcaption><h3>Herb Tea Packaging</h3><p class="meta">Product · 2024</p></figcaption>
+        </figure>
+        <!-- 더 많은 figure는 필요 시 복제 -->
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section container">
+      <header class="section-head">
+        <h2>Services</h2>
+        <p class="muted">기획부터 제작, 후가공까지 현실적인 디자인 솔루션을 제공합니다.</p>
+      </header>
+      <div class="grid-3">
+        <article class="panel">
+          <h3>Album Design</h3>
+          <ul><li>커버/패키지/인쇄물</li></ul>
+        </article>
+        <article class="panel">
+          <h3>Book Design</h3>
+          <ul><li>표지 &amp; 내지</li></ul>
+        </article>
+        <article class="panel">
+          <h3>Product &amp; Branding</h3>
+          <ul><li>패키지/라벨</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section id="clients" class="section container">
+      <header class="section-head">
+        <h2>Clients</h2>
+        <p class="muted">인디 레이블, 출판사, 브랜드와 협업</p>
+      </header>
+      <ul class="logos">
+        <li>Indie Label A</li><li>Publisher B</li><li>Brand C</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <header class="section-head">
+        <h2>Contact</h2>
+        <p class="muted">프로젝트 의뢰는 아래 폼으로 보내주세요.</p>
+      </header>
+      <form class="contact-form" method="POST">
+        <label>이름<input type="text" name="name" required></label>
+        <label>이메일<input type="email" name="email" required></label>
+        <label>메시지<textarea name="message" rows="6" required></textarea></label>
+        <button class="btn btn-primary" type="submit">보내기</button>
+      </form>
+    </section>
+  </main>
+
+  <button class="to-top">↑</button>
+
+  <footer class="footer">
+    <div class="container foot">
+      <span>Psalms Design</span>
+      <p>© <span id="year"></span> Psalms Design</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close">×</button>
+    <img id="lightbox-img" alt="">
+    <div class="lightbox-ui">
+      <button class="lightbox-prev">‹</button>
+      <button class="lightbox-next">›</button>
+    </div>
+  </div>
+</body>
+</html>
